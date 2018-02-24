@@ -2,29 +2,29 @@
   <div class="navbar-collapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/">Главная</a>
+        <a class="nav-link" href="/"><?=$lang["nav1"]?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=$siteLink?>/ranking">Топ игроков</a>
+        <a class="nav-link" href="<?=$siteLink?>/ranking"><?=$lang["nav2"]?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=$siteLink?>/stats">Статистика</a>
+        <a class="nav-link" href="<?=$siteLink?>/stats"><?=$lang["nav3"]?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Правила игры</a>
+        <a class="nav-link" href="#"><?=$lang["nav4"]?></a>
       </li>
     </ul>
     <ul class="navbar-nav ">
       <?php if(!isset($_SESSION['admin']) and !isset($_SESSION['user'])) { ?>
       <li class="nav-item">
-        <a class="nav-link" href="<?=$siteLink?>/usr/login">Войти в личный кабинет &raquo;</a>
+        <a class="nav-link" href="<?=$siteLink?>/usr/login"><?=$lang["nav5"]?> &raquo;</a>
       </li>
       <?php } elseif(isset($_SESSION['admin']) or isset($_SESSION['user'])) { ?>
       <li class="nav-item">
-        <a class="nav-link" href="?logout">&laquo; Выйти</a>
+        <a class="nav-link" href="?logout">&laquo; <?=$lang["nav6"]?></a>
       </li> 
       <li class="nav-item">
-        <a class="nav-link" href="<?=$siteLink?>/usr/profile">Личный кабинет &raquo;</a>
+        <a class="nav-link" href="<?=$siteLink?>/usr/profile"><?=$lang["nav7"]?> &raquo;</a>
       </li>
       <?php } ?>
     </ul>

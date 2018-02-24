@@ -17,7 +17,7 @@
 	      	<div class="head"></div>
 					<?php include("includes/navigation.php"); ?>
 	      		<div class="post">
-							<h1>Правила игры</h1>
+							<h1><?=$lang['rul1']?></h1>
 							<article>
 							 	<p>
 							     <?php echo $rules; ?>

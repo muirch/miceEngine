@@ -37,6 +37,8 @@
 							    echo $row['ShamanSaves']."/".$row['HardModeSaves']."/".$row['DivineModeSaves'];
 							    echo "</td></tr>";
 							}
+						} elseif (count($data) < 15) {
+							echo('<div class="post"><center><p>'.$lang["ran1"].'</p></center></div>');
 						}
 						?>
 						</tbody>

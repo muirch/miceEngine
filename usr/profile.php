@@ -59,48 +59,48 @@
 						  <div class="navbar-collapse">
 						    <ul class="navbar-nav mr-auto">
 						      <li class="nav-item">
-						        <a class="nav-link" href="<?=$siteLink?>/usr/profile">Настройки</a>
+						        <a class="nav-link" href="<?=$siteLink?>/usr/profile"><?=$lang['pro1']?></a>
 						      </li>
 						      <li class="nav-item">
-						        <a class="nav-link" href="<?=$siteLink?>/stats?name=<?=$userRow['Username'];?>">Моя статистика</a>
+						        <a class="nav-link" href="<?=$siteLink?>/stats?name=<?=$userRow['Username'];?>"><?=$lang['pro2']?></a>
 						      </li>
 						    </ul>
 						  </div>
 						</nav>    		
 	      		<div class="post">
 							<article style="color:#999">
-								<h1>Настройки</h1>
+								<h1><?=$lang['pro1']?></h1>
 								<?php if($userRow['Email']!="") { ?>
-								Ваш ID: <?php echo $userRow['PlayerID'] ?><br/>
-								Ваш e-mail: <?php echo $userRow['Email'] ?>
+								<?=$lang['pro3']?>: <?php echo $userRow['PlayerID'] ?><br/>
+								<?=$lang['pro4']?>: <?php echo $userRow['Email'] ?>
 								<?php } else { ?>
 						    <form class="form" method="post">
-						      <h2>Задать e-mail для восстановления доступа</h2>
+						      <h2><?=$lang['pro10']?></h2>
 								  <div class="form-row align-items-center" style="margin-bottom:16px;">
 								    <div class="col-auto">
 								      <input type="text" class="form-control mb-2 mb-sm-1" name="email" placeholder="example@mail.com" required autofocus>
-								      <input type="text" class="form-control mb-2 mb-sm-1" name="repemail" placeholder="Введите e-mail еще раз" required autofocus>
+								      <input type="text" class="form-control mb-2 mb-sm-1" name="repemail" placeholder="<?=$lang['pro11']?>" required autofocus>
 								    </div>
 								    <div class="col-auto">
-								      <button id="subButt" type="submit" name="changemail" class="btn mb-2 mb-sm-1">Отправить</button>
+								      <button id="subButt" type="submit" name="changemail" class="btn mb-2 mb-sm-1"><?=$lang['gen1']?></button>
 								    </div>
 								  </div>
 						    </form>
 								<?php } ?>
 						    <form class="form" method="post">
-						      <h2>Сменить пароль</h2>
+						      <h2><?=$lang['pro5']?></h2>
 								  <div class="form-row align-items-center" style="margin-bottom:16px;">
 								    <div class="col-auto">
-								      <input type="password" class="form-control mb-2 mb-sm-1" name="curpassword" placeholder="Текущий пароль" required autofocus>
-								      <input type="password" class="form-control mb-2 mb-sm-1" name="newpassword" placeholder="Новый пароль" required autofocus>
-								      <input type="password" class="form-control mb-2 mb-sm-1" name="repnewpassword" placeholder="Повторите новый пароль" required autofocus>
+								      <input type="password" class="form-control mb-2 mb-sm-1" name="curpassword" placeholder="<?=$lang['pro6']?>" required autofocus>
+								      <input type="password" class="form-control mb-2 mb-sm-1" name="newpassword" placeholder="<?=$lang['pro7']?>" required autofocus>
+								      <input type="password" class="form-control mb-2 mb-sm-1" name="repnewpassword" placeholder="<?=$lang['pro8']?>" required autofocus>
 								    </div>
 								    <div class="col-auto">
-								      <button id="subButt" type="submit" name="changepass" class="btn mb-2 mb-sm-1">Отправить</button>
+								      <button id="subButt" type="submit" name="changepass" class="btn mb-2 mb-sm-1"><?=$lang['gen1']?></button>
 								    </div>
 								  </div>
 						    </form>
-						    <?php if(isset($_GET['err'])) echo "<h4 style='color:red !important'>Ошибка! Проверьте правильность введенных данных.</h4>" ?>
+						    <?php if(isset($_GET['err'])) echo("<h4 style='color:red !important'>".$lang["proer1"]."</h4>"); ?>
 							</article>
 	          </div>
 					<div class="foot"></div>

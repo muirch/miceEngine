@@ -15,6 +15,16 @@
 	or die ('[MYSQL] Connection error!');
 	$conn->query("SET NAMES utf8");
 
+	############## MULTILANGUE SUPPORT ##############
+  $available_langs = array('en','ru');
+  if(isset($_GET['lang']) && $_GET['lang'] != ''){ 
+	if(in_array($_GET['lang'], $available_langs)){     
+ 		$_SESSION['lang'] = $_GET['lang'];   
+    } else
+    	$_SESSION['lang'] = 'en';
+  }
+  include $_SERVER['DOCUMENT_ROOT'].'/resources/lang/'.$_SESSION['lang'].'/lang.'.$_SESSION['lang'].'.php';
+
 	############## SETTINGS ##############
 	#Main link to the site
 	$siteLink = "https://".$_SERVER['SERVER_NAME']; 
@@ -41,7 +51,7 @@
 	#Checks session and if user has no session named user,
 	#he will be redirected to login page
 	function checkUserSession() {
-		if (!empty(isset($_SESSION['user']))) {
+		if (empty(isset($_SESSION['user']))) {
 			header("Location: $siteLink/usr/login");
 			exit;
 		}	
@@ -50,7 +60,7 @@
 	#Checks session and if user has no session named admin,
 	#he will be redirected to login page
 	function checkAdminSession() {
-		if (!empty(isset($_SESSION['admin']))){
+		if (empty(isset($_SESSION['admin']))) {
 			header("Location: $siteLink/usr/login");
 			exit;
 		}		

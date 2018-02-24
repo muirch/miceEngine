@@ -1,7 +1,6 @@
 <?php
 	require_once 'config.php';
 	include("modules/base.php");
-
   $data=$conn->query("SELECT * FROM news ORDER BY id DESC LIMIT 5");
 ?>
 <!DOCTYPE html>

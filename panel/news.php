@@ -23,29 +23,24 @@
 	      	<div class="head"></div>
 					<?php include("../includes/navigation.php"); ?>
 	      		<div class="post">
-	      			<h1>Опубликовать новость</h1>
+	      			<h1><?=$lang["adm10"]?></h1>
 							<?php 
 
-							if (isset($_POST['sub']) and isset($_GET['error'])) echo "<h4 style='color:red !important'>пишов нахуй!</h4>";
-							elseif (isset($_POST['sub']) and isset($_GET['suc'])) echo "<div class='alert alert-info' role='alert'>
-								<h4 class='alert-heading'>Опубликовано!</h4>
-								<p>Пост с текстом ".$_POST['text']." был успешно опубликован!</p>
-								<hr>
-								Вы можете <a href=''>перейти</a> на страницу с постом для взаимодействия с ним.
-							</div>";
+							if (isset($_GET['error'])) echo "<h4 style='color:red !important'>".$lang["admer1"]."</h4>";
+							elseif (isset($_GET['suc'])) echo "<h4 style='color:green !important'>".$lang["admsuc1"]."</h4>";
 							
 							?>
 					    <form class="form" style="margin-bottom:16px;" method="post">
 							  <div class="form-group">
-							    <label for="postTitle">Заголовок записи</label>
+							    <label for="postTitle"><?=$lang["adm11"]?></label>
 							    <input name="title" class="form-control" id="postTitle" placeholder="Hello World!">
 							  </div>
 							  <div class="form-group">
-							    <label for="postText">Текст записи</label>
+							    <label for="postText"><?=$lang["adm12"]?></label>
 							    <textarea name="text" class="form-control" id="postText" rows="3"></textarea>
 							  </div>
 						    <div style="margin-top:10px">
-						      <button id="subButt" type="submit" class="btn" name="sub">Опубликовать</button>
+						      <button id="subButt" type="submit" class="btn" name="sub"><?=$lang["adm13"]?></button>
 						    </div>
 					    </form>
 							</article>
