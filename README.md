@@ -1,6 +1,6 @@
 # miceEngine
 
-miceEngine is a minicms, created for the convenience of administrators of servers of this direction.
+miceEngine is a free open source minicms, created for the convenience of administrators of miceservers.
 
 Preview: https://sensou.me
 
