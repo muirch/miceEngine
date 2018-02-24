@@ -1,0 +1,23 @@
+#General
+RewriteEngine on
+RewriteBase /
+Options -Indexes -MultiViews
+Options +FollowSymlinks
+DirectoryIndex index index.php index.html
+AddDefaultCharset UTF-8
+
+#Rewrite
+RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
+RewriteRule ^/.htaccess$ - [G]
+
+#Enabling PHP in .html files
+RemoveHandler .html .htm
+AddType application/x-httpd-php .php .htm .html .phtml 
+
+#Erros
+RewriteCond %{HTTPS} !on
+ErrorDocument 403 http://%{HTTP_HOST}/
+ErrorDocument 404 http://%{HTTP_HOST}/
+
+#HTTPS
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}

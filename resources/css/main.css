@@ -1,0 +1,187 @@
+/*   
+Styles for miceEngine by Mi (https://sensou.me)
+This styles has been made special for this engine. You can edit it freely.
+If you are going to use them in your project, please specify my copyright.
+Version: 0.1a
+*/
+
+body {
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+}
+
+.container{
+	margin-top:25px;
+}
+
+main{
+	width:832px;
+}
+
+main .head{
+	width:800px;
+	height:145px;
+	margin-bottom: -131px;
+	margin-left:16px;
+}
+
+main .foot, section .foot{
+	min-height: 15px;
+}
+
+section{
+	width:832px;
+}
+
+article{
+  color:#999;
+}
+
+.header {
+  padding-bottom: 0.5rem;
+  width: 832px;
+}
+
+.header h3 {
+	margin-top: 0;
+  margin-bottom: 0;
+  line-height: 3;
+  padding-left: 20px;
+  font-size: 25px;
+}
+
+.header a{
+	line-height: 2;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 10px 10px 10px 0;
+  padding-right: 180px;
+  color: #FFFFFF;
+}
+
+.footer a{
+	color: #94ffd7;
+}
+
+.container {
+  display: flex;
+}
+
+.content {
+  margin: auto;
+}
+
+.post {
+	padding: 1.5px 25px;
+}	
+
+.post h1,.post h2,.post h3,.post h4,.post em,.post label,.post a,.mice a{
+	color:#62a4a8 !important;
+}
+
+.post p{
+	color: #999 !important;
+}
+
+.post img{
+	width: 80px;
+  height: 80px;
+  border: 0px;
+  padding: 1px;
+}
+
+.post a{
+	text-decoration:none !important;
+}
+
+.post a:hover{
+	color:#54898c;
+}
+
+#subButt{
+  background:#62a4a8;
+  color:white;
+}
+
+#subButt:hover{
+  background:#54898c;
+}
+
+.col{
+	max-width: 832px;
+}
+
+.navbar-collapse ul{
+  margin:0;
+}
+
+#maintenance {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+  -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(0);  /* IE 9 */
+  transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+  overflow:hidden !important;
+}
+
+/* Customize container */
+@media (min-width: 48em) {
+  .container {
+    max-width: 55rem;
+  }
+}
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 48em) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 0rem;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+    display: none;
+}
+.no-js h1 {
+    color: #222222;
+}
+.invisible {
+    visibility: hidden;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}

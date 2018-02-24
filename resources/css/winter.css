@@ -1,0 +1,29 @@
+/*   
+Styles add-on for miceEngine by Mi (https://sensou.me)
+This styles has been made special for this engine. You can edit it freely.
+If you are going to use them in your project, please specify my copyright.
+*/
+
+body {
+  background: #1e1815 url(https://i.imgur.com/oVoZvN4.png) no-repeat top;
+}
+
+main{
+	background: #191818 url(https://i.imgur.com/PZN9w1P.png) repeat-y top;
+}
+
+main .head{
+	background: url(https://i.imgur.com/PZcLPt5.png) no-repeat top;
+}
+
+main .foot, section .foot{
+	background: #191818 url(https://i.imgur.com/lerCGBq.png) no-repeat bottom;
+}
+
+section{
+	background: #fff url(https://i.imgur.com/PZN9w1P.png) repeat-y top;
+}
+
+.post {
+	background: #191818 url(https://i.imgur.com/PZN9w1P.png) repeat-y top;
+}	
