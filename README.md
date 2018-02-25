@@ -1,4 +1,4 @@
-# miceEngine
+# miceEngine (WIP, not all functionality is implemented)
 
 miceEngine is a free open source minicms, created for the convenience of administrators of miceservers.
 
