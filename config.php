@@ -1,36 +1,37 @@
 <?php
 	############## MAIN ##############
 	#Uncomment it to let show warnings and errors
-	#error_reporting( E_ALL );
-	#ini_set('display_errors', 1);
+	error_reporting( E_ALL );
+	ini_set('display_errors', 1);
 	
 	session_start();
 
 	############## DATABASE CONNETCION ##############
-	$conn = new mysqli(
-		'localhost', //host
-		'muir', //user
-		'F~e8EbifPb@x', //pass
-		'mices') //db
-	or die ('[MYSQL] Connection error!');
+	$server = "localhost"; //ip
+	$user = "muir"; //username
+	$pass = "F~e8EbifPb@x"; //password
+	$db = "mices"; //db
+	$conn = new mysqli($server, $user, $pass, $db) or die('Could not connect: ' . mysql_error());
 	$conn->query("SET NAMES utf8");
 
 	############## MULTILANGUE SUPPORT ##############
-  $available_langs = array('en','ru');
+  $available_langs = array('en','ru','uk');
+  $curlang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
   if(isset($_GET['lang']) && $_GET['lang'] != ''){ 
-	if(in_array($_GET['lang'], $available_langs)){     
- 		$_SESSION['lang'] = $_GET['lang'];   
-    } else
-    	$_SESSION['lang'] = 'en';
-  }
-  include $_SERVER['DOCUMENT_ROOT'].'/resources/lang/'.$_SESSION['lang'].'/lang.'.$_SESSION['lang'].'.php';
+		if(in_array($_GET['lang'], $available_langs)){     
+	 		$_SESSION['lang'] = $_GET['lang'];   
+	  } 
+	} elseif(!isset($_GET['lang'])){
+			if (in_array($curlang, $available_langs))
+	    $_SESSION['lang'] = $curlang;
+	}	else
+	  	$_SESSION['lang'] = 'en';
+  include $_SERVER['DOCUMENT_ROOT'].'/resources/lang/lang.'.$_SESSION['lang'].'.php';
 
 	############## SETTINGS ##############
-	#Main link to the site
-	$siteLink = "https://".$_SERVER['SERVER_NAME']; 
 	#Getting current date to some functions like post publishing
 	$now=date("d/m/y");
-	#Google Adsense settings
+	#Google Adsense settings. Uncomment to get working
 	#$pub="ca-pub-5743321198705602"
 	#$adid="5249212434"
 
@@ -39,6 +40,11 @@
 	include $_SERVER['DOCUMENT_ROOT'].'/modules/base.php'; //file that includes others modules
 
 	############## FUNCTIONS ##############
+	#Main link to the site
+	function url(){
+	  return sprintf("%s://%s", isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http', $_SERVER['SERVER_NAME']);
+	} 
+
 	#Checks session and if user has no session named user or admin,
 	#he will be redirected to login page
 	function checkSession() { //

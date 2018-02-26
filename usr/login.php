@@ -48,13 +48,13 @@
 	      		<div class="post">
 							<article class="container">
 						    <form class="form content" method="post">
-						      <h1>Авторизация</h1>
+						      <h1><?=$lang['log1']?></h1>
 								  <div class="form-row align-items-center" style="margin-bottom:16px;">
 								    <div class="col-auto">
 								    	<?php if(isset($_GET['err'])) echo "<h4 style='color:red !important'>Данные не верны!</h4>" ?>
-								      <input type="username" class="form-control mb-2 mb-sm-1" name="username" placeholder="Логин" required autofocus>
-								      <input type="password" class="form-control mb-2 mb-sm-1" name="password" placeholder="Пароль" required autofocus>
-								    	<button id="subButt" type="submit" name="sub" class="btn mb-2 mb-sm-1">Войти</button>
+								      <input type="username" class="form-control mb-2 mb-sm-1" name="username" placeholder="<?=$lang['log2']?>" required autofocus>
+								      <input type="password" class="form-control mb-2 mb-sm-1" name="password" placeholder="<?=$lang['log3']?>" required autofocus>
+								    	<button id="subButt" type="submit" name="sub" class="btn mb-2 mb-sm-1"><?=$lang['log4']?></button>
 								    </div>
 								  </div>
 						    </form>

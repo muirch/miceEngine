@@ -19,9 +19,9 @@
 					  <?php if (count($data) > 15) { ?>
 					  <thead>
 					    <tr>
-					      <th scope="col">Ник</th>
-					      <th scope="col">Сыра собрано первым</th>
-					      <th scope="col">Сейвов</th>
+					      <th scope="col"><?=$lang["ran2"]?></th>
+					      <th scope="col"><?=$lang["ran3"]?></th>
+					      <th scope="col"><?=$lang["ran4"]?></th>
 					    </tr>
 					  </thead>
 					  <tbody>

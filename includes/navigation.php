@@ -5,26 +5,26 @@
         <a class="nav-link" href="/"><?=$lang["nav1"]?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=$siteLink?>/ranking"><?=$lang["nav2"]?></a>
+        <a class="nav-link" href="<?php echo url(); ?>/ranking"><?=$lang["nav2"]?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?=$siteLink?>/stats"><?=$lang["nav3"]?></a>
+        <a class="nav-link" href="<?php echo url(); ?>/stats"><?=$lang["nav3"]?></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><?=$lang["nav4"]?></a>
       </li>
     </ul>
-    <ul class="navbar-nav ">
+    <ul class="navbar-nav">
       <?php if(!isset($_SESSION['admin']) and !isset($_SESSION['user'])) { ?>
       <li class="nav-item">
-        <a class="nav-link" href="<?=$siteLink?>/usr/login"><?=$lang["nav5"]?> &raquo;</a>
+        <a class="nav-link" href="<?php echo url(); ?>/usr/login"><?=$lang["nav5"]?> &raquo;</a>
       </li>
       <?php } elseif(isset($_SESSION['admin']) or isset($_SESSION['user'])) { ?>
       <li class="nav-item">
         <a class="nav-link" href="?logout">&laquo; <?=$lang["nav6"]?></a>
       </li> 
       <li class="nav-item">
-        <a class="nav-link" href="<?=$siteLink?>/usr/profile"><?=$lang["nav7"]?> &raquo;</a>
+        <a class="nav-link" href="<?php echo url(); ?>/usr/profile"><?=$lang["nav7"]?> &raquo;</a>
       </li>
       <?php } ?>
     </ul>
