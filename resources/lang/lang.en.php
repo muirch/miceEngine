@@ -13,7 +13,7 @@
   $lang["nav3"]      = "User's stats";
   $lang["nav4"]      = "Game rules";
   $lang["nav5"]      = "Log in into your account";
-  $lang["nav6"]      = "Exit";
+  $lang["nav6"]      = "Log out";
   $lang["nav7"]      = "Your account";
 
   //-----------------

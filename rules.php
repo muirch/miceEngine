@@ -1,6 +1,5 @@
 <?php
 	require_once 'config.php';
-	include("modules/base.php");
 	selectSiteData();
 
 	$rules=mb_convert_encoding($rowSiteData['rules'], "cp1252", "auto"); //converting to rus encoding

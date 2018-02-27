@@ -1,6 +1,5 @@
 <?php
 	require_once 'config.php';
-	include("modules/base.php");
 
   $data=$conn->query("SELECT * FROM users ORDER BY firstcount DESC LIMIT 15");
 ?>
