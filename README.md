@@ -2,11 +2,11 @@
 
 miceEngine is a free open source minicms, created for the convenience of administrators of miceservers.
 
-Preview: https://sensou.me
+Preview: https://sensou.me/
 
 ### Features
 
-  - Multi langue support
+  - Multi langue support (all supported languages below)
   - Google AdSense support
   - News publishing (50%)
   - User's personal area
@@ -20,3 +20,10 @@ Help me to translate and improve this engine! Write to mimuir@yandex.ru
 ### Installing (WIP)
 
 Simply clone or download the archive, and then put the files from the master to the root folder of your www, and finally open install.php and follow the its instructions.
+
+### Translations
+* Belorussian by Grafina
+* Chinese by Esperador & Google Translate
+* English
+* Russian
+* Ukrainian by pewtiubit
