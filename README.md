@@ -19,13 +19,6 @@ Trello board: https://trello.com/b/tv3Fktb9/miceengine
 
 Help me to translate and improve this engine! Write to mimuir@yandex.ru
   
-### Installing (WIP)
+[comment]: <> (### Installing)
 
-Simply clone or download the archive, and then put the files from the master to the root folder of your www, and finally open install.php and follow the its instructions.
-
-### Translations
-* Belorussian by Grafina
-* Chinese by Esperador & Google Translate
-* English
-* Russian
-* Ukrainian by pewtiubit
+[comment]: <> (Simply clone or download the archive, and then put the files from the master to the root folder of your www, and finally open install.php and follow the its instructions.)
