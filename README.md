@@ -4,6 +4,8 @@ miceEngine is a free open source minicms, created for the convenience of adminis
 
 Preview: https://sensou.me/
 
+Trello board: https://trello.com/b/tv3Fktb9/miceengine
+
 ### Features
 
   - Multi langue support (all supported languages below)
