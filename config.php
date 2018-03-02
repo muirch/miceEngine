@@ -6,8 +6,8 @@
 
 	############## DATABASE CONNETCION ##############
 	$server = "localhost"; //ip
-	$user = "muir"; //username
-	$pass = "F~e8EbifPb@x"; //password
+	$user = "user"; //username
+	$pass = ""; //password
 	$db = "mices"; //db
 	$conn = new mysqli($server, $user, $pass, $db) or die('Could not connect: ' . mysql_error());
 	$conn->query("SET NAMES utf8");
