@@ -18,7 +18,3 @@ Trello board: https://trello.com/b/tv3Fktb9/miceengine
   - Admin panel which's includes settings like maintenance mode and site style for season
 
 Help me to translate and improve this engine! Write to mimuir@yandex.ru
-  
-[comment]: <> (### Installing)
-
-[comment]: <> (Simply clone or download the archive, and then put the files from the master to the root folder of your www, and finally open install.php and follow the its instructions.)
